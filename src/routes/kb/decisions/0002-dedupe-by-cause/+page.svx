@@ -1,0 +1,35 @@
+---
+layout: runbook
+title: '0002 · Match causes before merging reports'
+owner: marctheshark3 with Codex
+status: proposed
+reviewed: '2026-10-28'
+signature: 'Codex for marctheshark3 · S01E03 · 2026-10-28'
+---
+
+<script>
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+## Context
+
+The [review of #4471](/kb/incidents/4471-review) shows that matching symptoms and subjects
+hid separate parser and form-hint failures. The tenant directory and the running classifier
+contradict the subject-only merge rule. Browser-based intake tags also disagree with cause assignments.
+
+## Proposed decision
+
+Replace decision 0001's operational rule with cause-based triage. Keep decision 0001 unchanged
+as the record of what was accepted; this proposal still needs the desk's acceptance.
+Keep an incoming report separate until its tenant, channel and mechanism are understood.
+Use one ticket per demonstrated cause, and count distinct report IDs rather than export rows.
+
+Unknown tenants and contradictory symptoms need investigation. A subject match is a search aid,
+not permission to merge. Report intake and merge throughput are separate measurements.
+
+## Consequences
+
+Triage takes more reading. It avoids hiding a second failure under an unrelated queued fix.
+Maintain the computed views alongside prose, and review the guidance when data or behavior changes.
+
+<RenderStamp {signature} />

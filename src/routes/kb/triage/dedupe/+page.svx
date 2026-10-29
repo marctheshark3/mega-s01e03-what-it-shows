@@ -1,0 +1,41 @@
+---
+layout: runbook
+title: 'Triage: duplicate reports'
+owner: support desk
+status: under-review
+reviewed: '2026-10-28'
+---
+
+<script>
+  import DedupeExplorer from '#lib/kb/DedupeExplorer.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+</script>
+
+A busy morning brings hundreds of reports about the same thing. We keep one ticket per issue
+and merge every duplicate into it, so engineering sees one thread with a count.
+
+<Callout kind="warn">
+The review of #4471 contradicts the subject-only rule recorded below.
+Use the cause-based procedure in <a href="/kb/incidents/4471-review">the signed review</a>
+while the desk considers <a href="/kb/decisions/0002-dedupe-by-cause">decision 0002</a>.
+</Callout>
+
+## Historical rule from decision 0001
+
+A report is a duplicate when its **subject line matches** the subject of an open ticket
+([decision 0001](/kb/decisions/0001-dedupe-by-subject)):
+
+1. lowercase the subject and strip punctuation;
+2. look for an open ticket with the same subject;
+3. found one: merge the report into it. None: open a new ticket.
+
+This was the old rule. The cause comparison below demonstrates why the subject is insufficient.
+
+## Try it
+
+<DedupeExplorer />
+
+## When you are unsure
+
+Keep reports separate until the cause is understood. Preserve report IDs and evidence;
+ask for the missing tenant or reproduction information before merging.

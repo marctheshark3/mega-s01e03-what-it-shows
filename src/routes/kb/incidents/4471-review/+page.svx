@@ -1,0 +1,72 @@
+---
+layout: runbook
+title: '#4471 review · separate the causes'
+owner: marctheshark3 with Codex
+status: reviewed
+reviewed: '2026-10-28'
+signature: 'Codex for marctheshark3 · S01E03 · 2026-10-28'
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
+  import ReviewFindings from '#lib/kb/ReviewFindings.svelte';
+  import DedupeExplorer from '#lib/kb/DedupeExplorer.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+  import issueLinks from '#lib/data/issue-links.json';
+</script>
+
+The merged ticket covers different mechanisms. The parser fix does not fix the booking form's
+misleading hint. Keep one engineering ticket per cause, with report IDs and a count for each.
+These are findings from the supplied desk model and export; the product implementation and its
+fixes are not included here.
+
+<Callout kind="warn">
+The old “one issue, one fix” claim is contradicted by the running view below.
+Use tenant locale, booking form and channel to place reports. Do not merge on subject or intake tag alone.
+</Callout>
+
+## Cause-based tickets
+
+<CauseTable ticket={4471} issues={issueLinks} />
+
+### Parser: month-first parsing of day-first input
+
+The shared parser reads month first where the tenant writes day first. App and email reports,
+and forms with a compatible day-first hint, follow this path in `causeOf`.
+For example, `R-41200` reports 7 April becoming 4 July at `harbour.dental` (`en-GB`).
+Correct the parsing contract to the tenant's format, validate impossible dates, and verify the
+intended calendar date survives storage and invitation generation.
+
+### Hint: booking-v3 teaches the wrong order
+
+For a day-first tenant, booking-v3 prints `MM/DD/YYYY` while its form reads dates in the tenant's order.
+For example, `R-41230` at `copper.studio` (`es-ES`) reports 6 January becoming 1 June.
+Typing `01/06` as instructed for 6 January can be read as 1 June. Align the hint and the reader,
+then test form submissions for each configured locale. Correcting the shared parser alone leaves this path wrong.
+
+<ReviewFindings />
+
+## Received and merged are different events
+
+<QueueTimeline ticket={4471} />
+
+## Before the next merge
+
+1. Keep the report ID, body, received time, tenant and channel.
+2. Look up the tenant's locale and form, and inspect the mechanism. An unknown tenant stays unplaced.
+3. Match to an existing ticket only when the cause matches. A shared subject does not establish that.
+4. Keep a separate count of distinct IDs for each cause and investigate contradictory symptoms.
+5. Recheck incoming reports after each fix. A change in merge throughput cannot demonstrate recovery.
+
+Try the actual cause comparison below. The same subject can describe different failures; different
+subjects can describe the same failure.
+
+<DedupeExplorer />
+
+See the [replacement decision proposal](/kb/decisions/0002-dedupe-by-cause),
+the [updated triage guidance](/kb/triage/dedupe), and the
+[original accepted decision](/kb/decisions/0001-dedupe-by-subject).
+
+<RenderStamp {signature} />

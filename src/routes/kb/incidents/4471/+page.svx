@@ -1,0 +1,36 @@
+---
+layout: runbook
+title: '#4471 · dates parse mm/dd in eu locales'
+owner: support desk
+status: under-review
+reviewed: '2026-10-28'
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+</script>
+
+Since April, people have told us their bookings land on the wrong day.
+The desk merged those reports as one known parser issue with a fix queued.
+The computed cause table contradicts that diagnosis.
+
+<Callout>
+Different causes were merged here. Read <a href="/kb/incidents/4471-review">the signed review</a>
+for separate tickets, report counts and the triage correction. A queued parser fix is not evidence that all reports are resolved.
+</Callout>
+
+## What was merged
+
+<CauseTable ticket={4471} />
+
+## Since April
+
+<QueueTimeline ticket={4471} />
+
+## Lessons
+
+- Match causes before merging. Shared subjects and intake tags do not establish a shared defect.
+- Count distinct report IDs, and keep received and merged times separate.
+- Keep the prose consistent with the running components and incoming evidence.
