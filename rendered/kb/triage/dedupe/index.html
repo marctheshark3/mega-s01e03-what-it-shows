@@ -2665,51 +2665,98 @@ function ka(e, t) {
 	var r = Da();
 	Lr(I(r), () => t.children), O(r), z(() => ni(r, 1, $r(n()), "svelte-17bri61")), Z(e, r);
 }
+var Aa = {
+	source: "https://hq.mega.dev/challenges/what-it-shows",
+	observedAfter: "The course accepted the two cause-based tickets on the first submission.",
+	ticket: 4471,
+	closed: "2026-10-05",
+	outcomes: [{
+		cause: "parser",
+		status: "fixed",
+		detail: "fix(dates): parse dd/mm for eu locales",
+		githubCloseReason: "completed"
+	}, {
+		cause: "hint",
+		status: "won't fix",
+		detail: "booking-v3 form retired",
+		githubCloseReason: "not planned"
+	}]
+}, ja = {
+	parser: "https://github.com/marctheshark3/mega-s01e03-what-it-shows/issues/1",
+	hint: "https://github.com/marctheshark3/mega-s01e03-what-it-shows/issues/2"
+}, Ma = /* @__PURE__ */ X("<tr><td class=\"svelte-kyy0xw\"><a> </a></td><td class=\"svelte-kyy0xw\"><strong> </strong></td><td class=\"svelte-kyy0xw\"> </td><td class=\"svelte-kyy0xw\"> </td></tr>"), Na = /* @__PURE__ */ X("<h2>Engineering update: different reasons to close</h2> <p>After the course accepted the separate tickets, its Challenge page revealed this desk update: <strong> </strong>.\n  This is an engineering report from <a>the course page</a>, not an independent test of a deployed product.</p> <div class=\"overflow svelte-kyy0xw\"><table><thead><tr><th>cause</th><th>desk disposition</th><th>desk evidence</th><th>GitHub closure</th></tr></thead><tbody></tbody></table></div> <p>Retirement is a reason to close the hint ticket as not planned; it is not a shipped hint fix.\n  Preserve the historical counts and the one-day reports' uncertainty. The export does not\n  verify that those symptoms were reproduced, fixed or eliminated by the parser change.</p>", 1), Pa = {
+	hash: "svelte-kyy0xw",
+	code: ".overflow.svelte-kyy0xw {overflow-x:auto;}td.svelte-kyy0xw {vertical-align:top;}"
+};
+function Fa(e, t) {
+	Je(t, !1), Xr(e, Pa), _i();
+	var n = Na(), r = R(L(n), 2), i = R(I(r)), a = I(i);
+	O(i);
+	var o = R(i, 2);
+	k(), O(r);
+	var s = R(r, 2), c = I(s), l = R(I(c));
+	Ur(l, 5, () => Aa.outcomes, (e) => e.cause, (e, t) => {
+		var n = Ma(), r = I(n), i = I(r), a = I(i, !0);
+		O(i), O(r);
+		var o = R(r), s = I(o), c = I(s, !0);
+		O(s), O(o);
+		var l = R(o), u = I(l, !0);
+		O(l);
+		var d = R(l), f = I(d, !0);
+		O(d), O(n), z(() => {
+			$(i, "href", ja[Y(t).cause]), Q(a, Y(t).cause), Q(c, Y(t).status), Q(u, Y(t).detail), Q(f, Y(t).githubCloseReason);
+		}), Z(e, n);
+	}), O(l), O(c), O(s), k(2), z(() => {
+		Q(a, `#${Aa.ticket ?? ""} closed ${Aa.closed ?? ""}`), $(o, "href", Aa.source);
+	}), Z(e, n), Ye();
+}
 // src/routes/kb/incidents/4471/+page.svx
-var Aa = /* @__PURE__ */ t({
-	default: () => za,
-	metadata: () => ja
-}), ja = {
+var Ia = /* @__PURE__ */ t({
+	default: () => Ga,
+	metadata: () => La
+}), La = {
 	layout: "runbook",
 	title: "#4471 · dates parse mm/dd in eu locales",
 	owner: "support desk",
-	status: "under-review",
+	status: "closed",
 	reviewed: "2026-10-28"
-}, { layout: Ma, title: Na, owner: Pa, status: Fa, reviewed: Ia } = ja, La = /* @__PURE__ */ X("Different causes were merged here. Read <a href=\"/kb/incidents/4471-review\">the signed review</a> for separate tickets, report counts and the triage correction. A queued parser fix is not evidence that all reports are resolved.", 1), Ra = /* @__PURE__ */ X("<p>Since April, people have told us their bookings land on the wrong day.\nThe desk merged those reports as one known parser issue with a fix queued.\nThe computed cause table contradicts that diagnosis.</p> <!> <h2>What was merged</h2> <!> <h2>Since April</h2> <!> <h2>Lessons</h2> <ul><li>Match causes before merging. Shared subjects and intake tags do not establish a shared defect.</li> <li>Count distinct report IDs, and keep received and merged times separate.</li> <li>Keep the prose consistent with the running components and incoming evidence.</li></ul>", 1);
-function za(e, t) {
+}, { layout: Ra, title: za, owner: Ba, status: Va, reviewed: Ha } = La, Ua = /* @__PURE__ */ X("Different causes were merged here. Read <a href=\"/kb/incidents/4471-review\">the signed review</a> for separate tickets, report counts and the triage correction. A queued parser fix is not evidence that all reports are resolved.", 1), Wa = /* @__PURE__ */ X("<p>Since April, people have told us their bookings land on the wrong day.\nThe desk merged those reports as one known parser issue with a fix queued.\nThe computed cause table contradicts that diagnosis.</p> <!> <!> <h2>What was merged</h2> <!> <h2>Since April</h2> <!> <h2>Lessons</h2> <ul><li>Match causes before merging. Shared subjects and intake tags do not establish a shared defect.</li> <li>Count distinct report IDs, and keep received and merged times separate.</li> <li>Keep the prose consistent with the running components and incoming evidence.</li></ul>", 1);
+function Ga(e, t) {
 	let n = bi(t, [
 		"children",
 		"$$slots",
 		"$$events",
 		"$$legacy"
 	]);
-	ki(e, Si(() => n, () => ja, {
+	ki(e, Si(() => n, () => La, {
 		children: (e, t) => {
-			var n = Ra(), r = R(L(n), 2);
+			var n = Wa(), r = R(L(n), 2);
 			ka(r, {
 				children: (e, t) => {
 					k();
-					var n = La();
+					var n = Ua();
 					k(2), Z(e, n);
 				},
 				$$slots: { default: !0 }
 			});
-			var i = R(r, 4);
-			xa(i, { ticket: 4471 }), Ea(R(i, 4), { ticket: 4471 }), k(4), Z(e, n);
+			var i = R(r, 2);
+			Fa(i, {});
+			var a = R(i, 4);
+			xa(a, { ticket: 4471 }), Ea(R(a, 4), { ticket: 4471 }), k(4), Z(e, n);
 		},
 		$$slots: { default: !0 }
 	}));
 }
 // src/lib/kb/ReviewFindings.svelte
-var Ba = /* @__PURE__ */ X("The first recorded merge was <strong> </strong>; <strong> </strong> reports had already arrived before it.", 1), Va = /* @__PURE__ */ X("<tr><td class=\"svelte-vqlue3\"><code> </code></td><td class=\"svelte-vqlue3\"> </td><td class=\"svelte-vqlue3\"> </td></tr>"), Ha = /* @__PURE__ */ X("<h2>How to read the counts</h2> <p>The export has <strong> </strong> rows and <strong> </strong> distinct reports\n  merged into #4471. The overlap contributes <strong> </strong> repeated rows;\n  count an ID once. Counts use <code>uniqueById</code>, then <code>mergedInto</code>, then <code>groupByCause</code>.</p> <p><strong> </strong> intake tags disagree with the tenant-based classification.\n  The browser locale and intake tag are guesses, not the tenant's locale or a diagnosis.\n  Tenant files are discovered by the existing directory glob; the platform determines date order.</p> <h2>The queue is still receiving reports</h2> <p>Reports run from <strong> </strong> to <strong> </strong>. <!> A merge spike is desk activity, not the start of the failures. A known status and a queued fix\n  do not show that the problem stopped. This export cannot establish what happened after its last report.</p> <h2>Reports that need follow-up</h2> <p><strong> </strong> reports are flagged by the desk as one-day moves.\n  They remain inside their assigned cause's count, not an extra set to add to the total.\n  Their words do not establish a month/day swap or a time-zone defect. Keep their evidence and\n  reproduce them separately; split a further ticket if the mechanism differs.</p> <div class=\"overflow svelte-vqlue3\"><table><thead><tr><th>report</th><th>filed cause</th><th>what the reporter said</th></tr></thead><tbody></tbody></table></div> <h2>Old guidance needs an explicit replacement</h2> <p>Decision 0001 was last reviewed on <strong> </strong>, <strong> </strong> days ago. The kb's review threshold is <strong> </strong> days. Its accepted status does not make its subject-only\n  merge rule consistent with the running cause model. Preserve it as a historical decision;\n  the replacement proposal below records the correction.</p>", 1), Ua = {
+var Ka = /* @__PURE__ */ X("The first recorded merge was <strong> </strong>; <strong> </strong> reports had already arrived before it.", 1), qa = /* @__PURE__ */ X("<tr><td class=\"svelte-vqlue3\"><code> </code></td><td class=\"svelte-vqlue3\"> </td><td class=\"svelte-vqlue3\"> </td></tr>"), Ja = /* @__PURE__ */ X("<h2>How to read the counts</h2> <p>The export has <strong> </strong> rows and <strong> </strong> distinct reports\n  merged into #4471. The overlap contributes <strong> </strong> repeated rows;\n  count an ID once. Counts use <code>uniqueById</code>, then <code>mergedInto</code>, then <code>groupByCause</code>.</p> <p><strong> </strong> intake tags disagree with the tenant-based classification.\n  The browser locale and intake tag are guesses, not the tenant's locale or a diagnosis.\n  Tenant files are discovered by the existing directory glob; the platform determines date order.</p> <h2>What the intake snapshot shows</h2> <p>Reports run from <strong> </strong> to <strong> </strong>. <!> A merge spike is desk activity, not the start of the failures. A known status and a queued fix\n  do not show that the problem stopped. This export cannot establish what happened after its last report.</p> <h2>Reports that need follow-up</h2> <p><strong> </strong> reports are flagged by the desk as one-day moves.\n  They remain inside their assigned cause's count, not an extra set to add to the total.\n  Their words do not establish a month/day swap or a time-zone defect. Keep their evidence and\n  reproduce them separately; split a further ticket if the mechanism differs.</p> <div class=\"overflow svelte-vqlue3\"><table><thead><tr><th>report</th><th>filed cause</th><th>what the reporter said</th></tr></thead><tbody></tbody></table></div> <h2>Old guidance needs an explicit replacement</h2> <p>Decision 0001 was last reviewed on <strong> </strong>, <strong> </strong> days ago. The kb's review threshold is <strong> </strong> days. Its accepted status does not make its subject-only\n  merge rule consistent with the running cause model. Preserve it as a historical decision;\n  the replacement proposal below records the correction.</p>", 1), Ya = {
 	hash: "svelte-vqlue3",
 	code: ".overflow.svelte-vqlue3 {overflow-x:auto;}td.svelte-vqlue3 {vertical-align:top;}"
 };
-function Wa(e, t) {
-	Je(t, !1), Xr(e, Ua);
+function Xa(e, t) {
+	Je(t, !1), Xr(e, Ya);
 	let n = ca(na).filter((e) => e.mergedInto === 4471), r = n.filter((e) => oa(e, ma(e)) !== e.meta.intakeTag), i = [...n].sort((e, t) => Date.parse(e.receivedAt) - Date.parse(t.receivedAt))[0], a = [...n].sort((e, t) => Date.parse(t.receivedAt) - Date.parse(e.receivedAt))[0], o = n.filter((e) => e.mergedAt).sort((e, t) => Date.parse(e.mergedAt) - Date.parse(t.mergedAt))[0]?.mergedAt, s = o ? n.filter((e) => Date.parse(e.receivedAt) < Date.parse(o)).length : 0, c = n.filter((e) => ra.oneDayMove.includes(e.id));
 	_i();
-	var l = Ha(), u = R(L(l), 2), d = R(I(u)), f = I(d, !0);
+	var l = Ja(), u = R(L(l), 2), d = R(I(u)), f = I(d, !0);
 	O(d);
 	var p = R(d, 2), m = I(p, !0);
 	O(p);
@@ -2722,7 +2769,7 @@ function Wa(e, t) {
 	var C = R(x, 2), w = I(C, !0);
 	O(C);
 	var ee = R(C, 2), te = (e) => {
-		var t = Ba(), n = R(L(t)), r = I(n, !0);
+		var t = Ka(), n = R(L(t)), r = I(n, !0);
 		O(n);
 		var i = R(n, 2), a = I(i, !0);
 		O(i), k(), z((e) => {
@@ -2736,7 +2783,7 @@ function Wa(e, t) {
 	O(re), k(), O(ne);
 	var ae = R(ne, 2), oe = I(ae), se = R(I(oe));
 	Ur(se, 5, () => c, (e) => e.id, (e, t) => {
-		var n = Va(), r = I(n), i = I(r), a = I(i, !0);
+		var n = qa(), r = I(n), i = I(r), a = I(i, !0);
 		O(i), O(r);
 		var o = R(r), s = I(o, !0);
 		O(o);
@@ -2760,7 +2807,7 @@ function Wa(e, t) {
 	]), Z(e, l), Ye();
 }
 // src/lib/kb/dedupe-cases.ts
-var Ga = [
+var Za = [
 	{
 		why: "app vs email, same tenant",
 		a: {
@@ -2826,12 +2873,12 @@ var Ga = [
 			subject: "Dates mixed up"
 		}
 	}
-], Ka = /* @__PURE__ */ X("<option> </option>"), qa = /* @__PURE__ */ X("<fieldset class=\"svelte-gq0h2h\"><legend></legend> <select aria-label=\"tenant\"></select> <select aria-label=\"channel\"></select> <input aria-label=\"subject\"/> <code> </code></fieldset>"), Ja = /* @__PURE__ */ X("<tr><td> </td><td> </td><td> </td></tr>"), Ya = /* @__PURE__ */ X("<div class=\"try svelte-gq0h2h\"><!> <p> </p></div> <div class=\"overflow svelte-gq0h2h\"><table><thead><tr><th>case</th><th>same subject</th><th>same cause</th></tr></thead><tbody></tbody></table></div>", 1), Xa = {
+], Qa = /* @__PURE__ */ X("<option> </option>"), $a = /* @__PURE__ */ X("<fieldset class=\"svelte-gq0h2h\"><legend></legend> <select aria-label=\"tenant\"></select> <select aria-label=\"channel\"></select> <input aria-label=\"subject\"/> <code> </code></fieldset>"), eo = /* @__PURE__ */ X("<tr><td> </td><td> </td><td> </td></tr>"), to = /* @__PURE__ */ X("<div class=\"try svelte-gq0h2h\"><!> <p> </p></div> <div class=\"overflow svelte-gq0h2h\"><table><thead><tr><th>case</th><th>same subject</th><th>same cause</th></tr></thead><tbody></tbody></table></div>", 1), no = {
 	hash: "svelte-gq0h2h",
 	code: ".overflow.svelte-gq0h2h {overflow-x:auto;}fieldset.svelte-gq0h2h {min-width:0;}.try.svelte-gq0h2h {display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:0.75rem;margin:1rem 0;}fieldset.svelte-gq0h2h {display:grid;gap:0.4rem;border:1px solid var(--line);border-radius:6px;}.verdict.svelte-gq0h2h {grid-column:1 / -1;margin:0;font-weight:600;color:var(--muted);}.dup.svelte-gq0h2h {color:var(--accent);font-weight:600;}"
 };
-function Za(e, t) {
-	Je(t, !0), Xr(e, Xa);
+function ro(e, t) {
+	Je(t, !0), Xr(e, no);
 	let n = [
 		"app",
 		"email",
@@ -2845,13 +2892,13 @@ function Za(e, t) {
 		channel: "form",
 		subject: "Booking on the wrong date"
 	}), a = (e, t) => sa(e, ma(e), t, ma(t));
-	var o = Ya(), s = L(o), c = I(s);
+	var o = to(), s = L(o), c = I(s);
 	Ur(c, 17, () => [r, i], zr, (e, t, r) => {
-		var i = qa(), a = I(i);
+		var i = $a(), a = I(i);
 		a.textContent = `report ${r === 0 ? "A" : "B"}`;
 		var o = R(a, 2);
 		Ur(o, 20, ha, (e) => e, (e, t) => {
-			var n = Ka(), r = I(n, !0);
+			var n = Qa(), r = I(n, !0);
 			O(n);
 			var i = {};
 			z(() => {
@@ -2860,7 +2907,7 @@ function Za(e, t) {
 		}), O(o);
 		var s = R(o, 2);
 		Ur(s, 20, () => n, (e) => e, (e, t) => {
-			var n = Ka(), r = I(n, !0);
+			var n = Qa(), r = I(n, !0);
 			O(n);
 			var i = {};
 			z(() => {
@@ -2877,8 +2924,8 @@ function Za(e, t) {
 	var d = I(l, !0);
 	O(l), O(s);
 	var f = R(s, 2), p = I(f), m = R(I(p));
-	Ur(m, 21, () => Ga, (e) => e.why, (e, t) => {
-		var n = Ja(), r = I(n), i = I(r, !0);
+	Ur(m, 21, () => Za, (e) => e.why, (e, t) => {
+		var n = eo(), r = I(n), i = I(r, !0);
 		O(r);
 		var o = R(r), s = I(o, !0);
 		O(o);
@@ -2892,30 +2939,28 @@ function Za(e, t) {
 		u = ni(l, 1, "verdict svelte-gq0h2h", null, u, e), Q(d, t);
 	}, [() => ({ dup: a(r, i) }), () => a(r, i) ? "same cause — merge" : "different causes — keep apart"]), Z(e, o), Ye();
 }
-var Qa = {
-	parser: "https://github.com/marctheshark3/mega-s01e03-what-it-shows/issues/1",
-	hint: "https://github.com/marctheshark3/mega-s01e03-what-it-shows/issues/2"
-}, $a = /* @__PURE__ */ t({
-	default: () => co,
-	metadata: () => eo
-}), eo = {
+// src/routes/kb/incidents/4471-review/+page.svx
+var io = /* @__PURE__ */ t({
+	default: () => mo,
+	metadata: () => ao
+}), ao = {
 	layout: "runbook",
 	title: "#4471 review · separate the causes",
 	owner: "marctheshark3 with Codex",
-	status: "reviewed",
+	status: "closed",
 	reviewed: "2026-10-28",
 	signature: "Codex for marctheshark3 · S01E03 · 2026-10-28"
-}, { layout: to, title: no, owner: ro, status: io, reviewed: ao, signature: oo } = eo, so = /* @__PURE__ */ X("<p>The merged ticket covers different mechanisms. The parser fix does not fix the booking form’s\nmisleading hint. Keep one engineering ticket per cause, with report IDs and a count for each.\nThese are findings from the supplied desk model and export; the product implementation and its\nfixes are not included here.</p> <!> <h2>Cause-based tickets</h2> <!> <h3>Parser: month-first parsing of day-first input</h3> <p>The shared parser reads month first where the tenant writes day first. App and email reports,\nand forms with a compatible day-first hint, follow this path in <code>causeOf</code>.\nFor example, <code>R-41200</code> reports 7 April becoming 4 July at <code>harbour.dental</code> (<code>en-GB</code>).\nCorrect the parsing contract to the tenant’s format, validate impossible dates, and verify the\nintended calendar date survives storage and invitation generation.</p> <h3>Hint: booking-v3 teaches the wrong order</h3> <p>For a day-first tenant, booking-v3 prints <code>MM/DD/YYYY</code> while its form reads dates in the tenant’s order.\nFor example, <code>R-41230</code> at <code>copper.studio</code> (<code>es-ES</code>) reports 6 January becoming 1 June.\nTyping <code>01/06</code> as instructed for 6 January can be read as 1 June. Align the hint and the reader,\nthen test form submissions for each configured locale. Correcting the shared parser alone leaves this path wrong.</p> <!> <h2>Received and merged are different events</h2> <!> <h2>Before the next merge</h2> <ol><li>Keep the report ID, body, received time, tenant and channel.</li> <li>Look up the tenant’s locale and form, and inspect the mechanism. An unknown tenant stays unplaced.</li> <li>Match to an existing ticket only when the cause matches. A shared subject does not establish that.</li> <li>Keep a separate count of distinct IDs for each cause and investigate contradictory symptoms.</li> <li>Recheck incoming reports after each fix. A change in merge throughput cannot demonstrate recovery.</li></ol> <p>Try the actual cause comparison below. The same subject can describe different failures; different\nsubjects can describe the same failure.</p> <!> <p>See the <a href=\"/kb/decisions/0002-dedupe-by-cause\">replacement decision proposal</a>,\nthe <a href=\"/kb/triage/dedupe\">updated triage guidance</a>, and the <a href=\"/kb/decisions/0001-dedupe-by-subject\">original accepted decision</a>.</p> <!>", 1);
-function co(e, t) {
+}, { layout: oo, title: so, owner: co, status: lo, reviewed: uo, signature: fo } = ao, po = /* @__PURE__ */ X("<p>The merged ticket covers different mechanisms. The parser fix does not fix the booking form’s\nmisleading hint. Keep one engineering ticket per cause, with report IDs and a count for each.\nThese are findings from the supplied desk model and export; the product implementation and its\nfixes are not included here.</p> <!> <!> <h2>Cause-based tickets</h2> <!> <h3>Parser: month-first parsing of day-first input</h3> <p>The shared parser reads month first where the tenant writes day first. App and email reports,\nand forms with a compatible day-first hint, follow this path in <code>causeOf</code>.\nFor example, <code>R-41200</code> reports 7 April becoming 4 July at <code>harbour.dental</code> (<code>en-GB</code>).\nCorrect the parsing contract to the tenant’s format, validate impossible dates, and verify the\nintended calendar date survives storage and invitation generation.</p> <h3>Hint: booking-v3 teaches the wrong order</h3> <p>For a day-first tenant, booking-v3 prints <code>MM/DD/YYYY</code> while its form reads dates in the tenant’s order.\nFor example, <code>R-41230</code> at <code>copper.studio</code> (<code>es-ES</code>) reports 6 January becoming 1 June.\nTyping <code>01/06</code> as instructed for 6 January can be read as 1 June. Align the hint and the reader,\nthen test form submissions for each configured locale. Correcting the shared parser alone leaves this path wrong.</p> <!> <h2>Received and merged are different events</h2> <!> <h2>Before the next merge</h2> <ol><li>Keep the report ID, body, received time, tenant and channel.</li> <li>Look up the tenant’s locale and form, and inspect the mechanism. An unknown tenant stays unplaced.</li> <li>Match to an existing ticket only when the cause matches. A shared subject does not establish that.</li> <li>Keep a separate count of distinct IDs for each cause and investigate contradictory symptoms.</li> <li>Recheck incoming reports after each fix. A change in merge throughput cannot demonstrate recovery.</li></ol> <p>Try the actual cause comparison below. The same subject can describe different failures; different\nsubjects can describe the same failure.</p> <!> <p>See the <a href=\"/kb/decisions/0002-dedupe-by-cause\">replacement decision proposal</a>,\nthe <a href=\"/kb/triage/dedupe\">updated triage guidance</a>, and the <a href=\"/kb/decisions/0001-dedupe-by-subject\">original accepted decision</a>.</p> <!>", 1);
+function mo(e, t) {
 	let n = bi(t, [
 		"children",
 		"$$slots",
 		"$$events",
 		"$$legacy"
 	]);
-	ki(e, Si(() => n, () => eo, {
+	ki(e, Si(() => n, () => ao, {
 		children: (e, t) => {
-			var n = so(), r = R(L(n), 2);
+			var n = po(), r = R(L(n), 2);
 			ka(r, {
 				kind: "warn",
 				children: (e, t) => {
@@ -2923,80 +2968,82 @@ function co(e, t) {
 				},
 				$$slots: { default: !0 }
 			});
-			var i = R(r, 4);
-			xa(i, {
+			var i = R(r, 2);
+			Fa(i, {});
+			var a = R(i, 4);
+			xa(a, {
 				ticket: 4471,
 				get issues() {
-					return Qa;
+					return ja;
 				}
 			});
-			var a = R(i, 10);
-			Wa(a, {});
-			var o = R(a, 4);
-			Ea(o, { ticket: 4471 });
-			var s = R(o, 8);
-			Za(s, {}), Gi(R(s, 4), { get signature() {
-				return oo;
+			var o = R(a, 10);
+			Xa(o, {});
+			var s = R(o, 4);
+			Ea(s, { ticket: 4471 });
+			var c = R(s, 8);
+			ro(c, {}), Gi(R(c, 4), { get signature() {
+				return fo;
 			} }), Z(e, n);
 		},
 		$$slots: { default: !0 }
 	}));
 }
 // src/routes/kb/triage/dedupe/+page.svx
-var lo = /* @__PURE__ */ t({
-	default: () => yo,
-	metadata: () => uo
-}), uo = {
+var ho = /* @__PURE__ */ t({
+	default: () => wo,
+	metadata: () => go
+}), go = {
 	layout: "runbook",
 	title: "Triage: duplicate reports",
 	owner: "support desk",
 	status: "under-review",
 	reviewed: "2026-10-28"
-}, { layout: fo, title: po, owner: mo, status: ho, reviewed: go } = uo, _o = /* @__PURE__ */ X("The review of #4471 contradicts the subject-only rule recorded below.\nUse the cause-based procedure in <a href=\"/kb/incidents/4471-review\">the signed review</a> while the desk considers <a href=\"/kb/decisions/0002-dedupe-by-cause\">decision 0002</a>.", 1), vo = /* @__PURE__ */ X("<p>A busy morning brings hundreds of reports about the same thing. We keep one ticket per issue\nand merge every duplicate into it, so engineering sees one thread with a count.</p> <!> <h2>Historical rule from decision 0001</h2> <p>A report is a duplicate when its <strong>subject line matches</strong> the subject of an open ticket\n(<a href=\"/kb/decisions/0001-dedupe-by-subject\">decision 0001</a>):</p> <ol><li>lowercase the subject and strip punctuation;</li> <li>look for an open ticket with the same subject;</li> <li>found one: merge the report into it. None: open a new ticket.</li></ol> <p>This was the old rule. The cause comparison below demonstrates why the subject is insufficient.</p> <h2>Try it</h2> <!> <h2>When you are unsure</h2> <p>Keep reports separate until the cause is understood. Preserve report IDs and evidence;\nask for the missing tenant or reproduction information before merging.</p>", 1);
-function yo(e, t) {
+}, { layout: _o, title: vo, owner: yo, status: bo, reviewed: xo } = go, So = /* @__PURE__ */ X("The review of #4471 contradicts the subject-only rule recorded below.\nUse the cause-based procedure in <a href=\"/kb/incidents/4471-review\">the signed review</a> while the desk considers <a href=\"/kb/decisions/0002-dedupe-by-cause\">decision 0002</a>.", 1), Co = /* @__PURE__ */ X("<p>A busy morning brings hundreds of reports about the same thing. We keep one ticket per issue\nand merge every duplicate into it, so engineering sees one thread with a count.</p> <!> <h2>Historical rule from decision 0001</h2> <p>A report is a duplicate when its <strong>subject line matches</strong> the subject of an open ticket\n(<a href=\"/kb/decisions/0001-dedupe-by-subject\">decision 0001</a>):</p> <ol><li>lowercase the subject and strip punctuation;</li> <li>look for an open ticket with the same subject;</li> <li>found one: merge the report into it. None: open a new ticket.</li></ol> <p>This was the old rule. The cause comparison below demonstrates why the subject is insufficient.</p> <h2>Try it</h2> <!> <h2>When you are unsure</h2> <p>Keep reports separate until the cause is understood. Preserve report IDs and evidence;\nask for the missing tenant or reproduction information before merging.</p>", 1);
+function wo(e, t) {
 	let n = bi(t, [
 		"children",
 		"$$slots",
 		"$$events",
 		"$$legacy"
 	]);
-	ki(e, Si(() => n, () => uo, {
+	ki(e, Si(() => n, () => go, {
 		children: (e, t) => {
-			var n = vo(), r = R(L(n), 2);
+			var n = Co(), r = R(L(n), 2);
 			ka(r, {
 				kind: "warn",
 				children: (e, t) => {
 					k();
-					var n = _o();
+					var n = So();
 					k(4), Z(e, n);
 				},
 				$$slots: { default: !0 }
-			}), Za(R(r, 12), {}), k(4), Z(e, n);
+			}), ro(R(r, 12), {}), k(4), Z(e, n);
 		},
 		$$slots: { default: !0 }
 	}));
 }
 // src/lib/kb/KbIndex.svelte
-var bo = /* @__PURE__ */ X("<tr><td><a> </a></td><td> </td><td> </td><td> </td></tr>"), xo = /* @__PURE__ */ X("<table><thead><tr><th>page</th><th>owner</th><th>status</th><th>reviewed</th></tr></thead><tbody></tbody></table>"), So = {
+var To = /* @__PURE__ */ X("<tr><td><a> </a></td><td> </td><td> </td><td> </td></tr>"), Eo = /* @__PURE__ */ X("<table><thead><tr><th>page</th><th>owner</th><th>status</th><th>reviewed</th></tr></thead><tbody></tbody></table>"), Do = {
 	hash: "svelte-tbc1ha",
 	code: ".stale.svelte-tbc1ha {color:var(--warn);font-weight:600;}"
 };
-function Co(e, t) {
-	Je(t, !1), Xr(e, So);
+function Oo(e, t) {
+	Je(t, !1), Xr(e, Do);
 	let n = Object.entries(/* @__PURE__ */ Object.assign({
 		"/src/routes/kb/decisions/0001-dedupe-by-subject/+page.svx": Ai,
 		"/src/routes/kb/decisions/0002-dedupe-by-cause/+page.svx": Ki,
-		"/src/routes/kb/incidents/4471/+page.svx": Aa,
-		"/src/routes/kb/incidents/4471-review/+page.svx": $a,
-		"/src/routes/kb/triage/dedupe/+page.svx": lo
+		"/src/routes/kb/incidents/4471/+page.svx": Ia,
+		"/src/routes/kb/incidents/4471-review/+page.svx": io,
+		"/src/routes/kb/triage/dedupe/+page.svx": ho
 	})).map(([e, t]) => ({
 		href: e.replace("/src/routes", "").replace("/+page.svx", ""),
 		...t.metadata
 	})).sort((e, t) => e.href.localeCompare(t.href));
 	_i();
-	var r = xo(), i = R(I(r));
+	var r = Eo(), i = R(I(r));
 	Ur(i, 5, () => n, (e) => e.href, (e, t) => {
-		var n = bo(), r = I(n), i = I(r), a = I(i, !0);
+		var n = To(), r = I(n), i = I(r), a = I(i, !0);
 		O(i), O(r);
 		var o = R(r), s = I(o, !0);
 		O(o);
@@ -3011,40 +3058,40 @@ function Co(e, t) {
 	}), O(i), O(r), Z(e, r), Ye();
 }
 // src/routes/kb/+page.svx
-var wo = /* @__PURE__ */ t({
-	default: () => Mo,
-	metadata: () => To
-}), To = {
+var ko = /* @__PURE__ */ t({
+	default: () => Lo,
+	metadata: () => Ao
+}), Ao = {
 	layout: "runbook",
 	title: "Support knowledge base",
 	owner: "support desk",
 	status: "living",
 	reviewed: "2026-09-28T00:00:00.000Z"
-}, { layout: Eo, title: Do, owner: Oo, status: ko, reviewed: Ao } = To, jo = /* @__PURE__ */ X("<p>What the support desk knows, kept next to the code that knows it. One desk, every product: <code>sched-prod</code> (calendar invites for about 300k people) and the rest. When something breaks, the reports land here first.</p> <p>Start with <a href=\"/kb/triage/dedupe\">triage</a> if you are new on the desk.</p> <h2>Pages</h2> <!> <h2>Writing a page</h2> <p>Keep the words here and the logic in <code>src/lib</code>. A number that can be computed should be\ncomputed by a component, not typed into a paragraph.</p>", 1);
-function Mo(e, t) {
+}, { layout: jo, title: Mo, owner: No, status: Po, reviewed: Fo } = Ao, Io = /* @__PURE__ */ X("<p>What the support desk knows, kept next to the code that knows it. One desk, every product: <code>sched-prod</code> (calendar invites for about 300k people) and the rest. When something breaks, the reports land here first.</p> <p>Start with <a href=\"/kb/triage/dedupe\">triage</a> if you are new on the desk.</p> <h2>Pages</h2> <!> <h2>Writing a page</h2> <p>Keep the words here and the logic in <code>src/lib</code>. A number that can be computed should be\ncomputed by a component, not typed into a paragraph.</p>", 1);
+function Lo(e, t) {
 	let n = bi(t, [
 		"children",
 		"$$slots",
 		"$$events",
 		"$$legacy"
 	]);
-	ki(e, Si(() => n, () => To, {
+	ki(e, Si(() => n, () => Ao, {
 		children: (e, t) => {
-			var n = jo();
-			Co(R(L(n), 6), {}), k(4), Z(e, n);
+			var n = Io();
+			Oo(R(L(n), 6), {}), k(4), Z(e, n);
 		},
 		$$slots: { default: !0 }
 	}));
 }
 // scripts/client.mjs
-var No = /* #__PURE__ */ Object.assign({
-	"/src/routes/kb/+page.svx": wo,
+var Ro = /* #__PURE__ */ Object.assign({
+	"/src/routes/kb/+page.svx": ko,
 	"/src/routes/kb/decisions/0001-dedupe-by-subject/+page.svx": Ai,
 	"/src/routes/kb/decisions/0002-dedupe-by-cause/+page.svx": Ki,
-	"/src/routes/kb/incidents/4471/+page.svx": Aa,
-	"/src/routes/kb/incidents/4471-review/+page.svx": $a,
-	"/src/routes/kb/triage/dedupe/+page.svx": lo
-}), Po = document.documentElement.dataset.route, Fo = No[`/src/routes${Po}/+page.svx`];
-if (!Fo) throw Error(`Unknown kb route: ${Po}`);
-Mr(Fo.default, { target: document.getElementById("page") });
+	"/src/routes/kb/incidents/4471/+page.svx": Ia,
+	"/src/routes/kb/incidents/4471-review/+page.svx": io,
+	"/src/routes/kb/triage/dedupe/+page.svx": ho
+}), zo = document.documentElement.dataset.route, Bo = Ro[`/src/routes${zo}/+page.svx`];
+if (!Bo) throw Error(`Unknown kb route: ${zo}`);
+Mr(Bo.default, { target: document.getElementById("page") });
 </script></body></html>

@@ -1,0 +1,4 @@
+The course support desk engineering update reports #4471 closed on 2026-10-05. The hint is marked WON'T FIX because the booking-v3 form was retired. Closing as not planned, not as a shipped hint fix. The historical 33-report scope remains recorded.
+
+Source: https://hq.mega.dev/challenges/what-it-shows
+Signed kb review: src/routes/kb/incidents/4471-review/+page.svx

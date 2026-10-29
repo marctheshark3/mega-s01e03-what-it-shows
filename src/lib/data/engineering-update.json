@@ -1,0 +1,20 @@
+{
+  "source": "https://hq.mega.dev/challenges/what-it-shows",
+  "observedAfter": "The course accepted the two cause-based tickets on the first submission.",
+  "ticket": 4471,
+  "closed": "2026-10-05",
+  "outcomes": [
+    {
+      "cause": "parser",
+      "status": "fixed",
+      "detail": "fix(dates): parse dd/mm for eu locales",
+      "githubCloseReason": "completed"
+    },
+    {
+      "cause": "hint",
+      "status": "won't fix",
+      "detail": "booking-v3 form retired",
+      "githubCloseReason": "not planned"
+    }
+  ]
+}

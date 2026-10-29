@@ -1,0 +1,4 @@
+The course support desk engineering update reports #4471 closed on 2026-10-05. The parser is marked FIXED: "fix(dates): parse dd/mm for eu locales". Closing as completed on that evidence; this is not independent verification of the deployed product. The historical 379-report scope and the five one-day reports' uncertainty remain recorded.
+
+Source: https://hq.mega.dev/challenges/what-it-shows
+Signed kb review: src/routes/kb/incidents/4471-review/+page.svx

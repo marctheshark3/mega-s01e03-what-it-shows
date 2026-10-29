@@ -28,7 +28,7 @@
   Tenant files are discovered by the existing directory glob; the platform determines date order.
 </p>
 
-<h2>The queue is still receiving reports</h2>
+<h2>What the intake snapshot shows</h2>
 <p>
   Reports run from <strong>{firstReceived.receivedAt.slice(0, 10)}</strong> to
   <strong>{lastReceived.receivedAt.slice(0, 10)}</strong>.

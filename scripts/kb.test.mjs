@@ -42,6 +42,9 @@ test('the actual signed review renders both causes and the derived desk referenc
     assert.doesNotMatch(page.body, /no desk ref/);
     assert.match(page.body, /one-day/);
     assert.match(page.body, /2026-04-01/);
+    assert.match(page.body, /booking-v3 form retired/);
+    assert.match(page.body, /fix\(dates\): parse dd\/mm for eu locales/);
+    assert.match(page.body, /not planned/);
   } finally {
     await view.close();
   }

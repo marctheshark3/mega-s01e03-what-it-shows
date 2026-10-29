@@ -2,7 +2,7 @@
 layout: runbook
 title: '#4471 · dates parse mm/dd in eu locales'
 owner: support desk
-status: under-review
+status: closed
 reviewed: '2026-10-28'
 ---
 
@@ -10,6 +10,7 @@ reviewed: '2026-10-28'
   import CauseTable from '#lib/kb/CauseTable.svelte';
   import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
   import Callout from '#lib/kb/Callout.svelte';
+  import ResolutionUpdate from '#lib/kb/ResolutionUpdate.svelte';
 </script>
 
 Since April, people have told us their bookings land on the wrong day.
@@ -20,6 +21,8 @@ The computed cause table contradicts that diagnosis.
 Different causes were merged here. Read <a href="/kb/incidents/4471-review">the signed review</a>
 for separate tickets, report counts and the triage correction. A queued parser fix is not evidence that all reports are resolved.
 </Callout>
+
+<ResolutionUpdate />
 
 ## What was merged
 

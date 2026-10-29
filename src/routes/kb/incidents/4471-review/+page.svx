@@ -2,7 +2,7 @@
 layout: runbook
 title: '#4471 review · separate the causes'
 owner: marctheshark3 with Codex
-status: reviewed
+status: closed
 reviewed: '2026-10-28'
 signature: 'Codex for marctheshark3 · S01E03 · 2026-10-28'
 ---
@@ -11,6 +11,7 @@ signature: 'Codex for marctheshark3 · S01E03 · 2026-10-28'
   import CauseTable from '#lib/kb/CauseTable.svelte';
   import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
   import ReviewFindings from '#lib/kb/ReviewFindings.svelte';
+  import ResolutionUpdate from '#lib/kb/ResolutionUpdate.svelte';
   import DedupeExplorer from '#lib/kb/DedupeExplorer.svelte';
   import Callout from '#lib/kb/Callout.svelte';
   import RenderStamp from '#lib/kb/RenderStamp.svelte';
@@ -26,6 +27,8 @@ fixes are not included here.
 The old “one issue, one fix” claim is contradicted by the running view below.
 Use tenant locale, booking form and channel to place reports. Do not merge on subject or intake tag alone.
 </Callout>
+
+<ResolutionUpdate />
 
 ## Cause-based tickets
 

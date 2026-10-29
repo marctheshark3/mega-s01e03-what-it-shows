@@ -82,6 +82,10 @@ export. The lockfile pins its dependencies. No hosting service or GitHub Pages i
 - Checked that the actual rendered reference matches the signature-derived value.
 - Inspected the wide and narrow layouts and checked the explorer's interactive verdict in the browser.
 - Kept publication for a separate, explicit approval covering this public repo and its two issues.
+- After publication, the course accepted the tickets but required a further step. Reopened the
+  Challenge page and found the newly revealed engineering update: #4471 closed on 2026-10-05,
+  parser fixed, hint not fixed because booking-v3 was retired. Recorded the update separately
+  from the immutable report snapshot and preserved the distinct closure reasons.
 
 Local setup note: an offline dependency install lacked cached registry metadata. The normal
 dependency install succeeded. Vite's build result required handling its array form, and Svelte's
