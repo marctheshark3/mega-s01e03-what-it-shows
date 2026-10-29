@@ -86,6 +86,11 @@ export. The lockfile pins its dependencies. No hosting service or GitHub Pages i
   Challenge page and found the newly revealed engineering update: #4471 closed on 2026-10-05,
   parser fixed, hint not fixed because booking-v3 was retired. Recorded the update separately
   from the immutable report snapshot and preserved the distinct closure reasons.
+- The next submission refused an author-label signature. Called `start-challenge` as directed,
+  used its issued ticket exactly as each added page's frontmatter signature, and regenerated
+  the desk reference through the original component. The course's signature is deliberately
+  included in those pages as required; private request/reply logs are outside this repository
+  and redact course proofs.
 
 Local setup note: an offline dependency install lacked cached registry metadata. The normal
 dependency install succeeded. Vite's build result required handling its array form, and Svelte's

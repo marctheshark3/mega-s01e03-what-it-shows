@@ -4,7 +4,7 @@ title: '0002 · Match causes before merging reports'
 owner: marctheshark3 with Codex
 status: proposed
 reviewed: '2026-10-28'
-signature: 'Codex for marctheshark3 · S01E03 · 2026-10-28'
+signature: 'v1.eyJzdWIiOiI2MzUxIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMyNDE1MDMsImV4cCI6MTc5MzMyNzkwM30.j-mHLEABMQEzsJLGfzK-h59kPKUSrBTGrUuKbh5tw40'
 ---
 
 <script>
